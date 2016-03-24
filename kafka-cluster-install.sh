@@ -38,7 +38,7 @@ help()
     #TODO: Add help text here
     echo "This script installs kafka cluster on Ubuntu"
     echo "Parameters:"
-    echo "-k kafka version like 0.9.0.0"
+    echo "-k kafka version like 0.8.2.1"
     echo "-b broker id"
     echo "-h view this help content"
     echo "-z zookeeper not kafka"
@@ -78,11 +78,10 @@ else
 fi
 
 #Script Parameters
-KF_VERSION="0.9.0.0"
+KF_VERSION="0.8.2.1"
 BROKER_ID=0
 ZOOKEEPER1KAFKA0="0"
 
-# check if this IP is used, ideally it should be parameterized
 ZOOKEEPER_IP_PREFIX="10.0.1.10"
 INSTANCE_COUNT=1
 ZOOKEEPER_PORT="2181"
