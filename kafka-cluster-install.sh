@@ -78,7 +78,7 @@ else
 fi
 
 #Script Parameters
-KF_VERSION="0.8.2.1"
+KF_VERSION="0.9.0.0"
 BROKER_ID=0
 ZOOKEEPER1KAFKA0="0"
 
