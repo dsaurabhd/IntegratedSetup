@@ -38,7 +38,7 @@ help()
     #TODO: Add help text here
     echo "This script installs kafka cluster on Ubuntu"
     echo "Parameters:"
-    echo "-k kafka version like 0.8.2.1"
+    echo "-k kafka version like 0.9.0.0"
     echo "-b broker id"
     echo "-h view this help content"
     echo "-z zookeeper not kafka"
