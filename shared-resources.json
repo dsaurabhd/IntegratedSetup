@@ -34,8 +34,7 @@
     {
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.dmz.name]",
-      "location": "[resourceGroup().location]",
+      "name": "[parameters('networkSettings').subnets.dmz.name]",     
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.dmz.prefix]"
       }
@@ -43,8 +42,7 @@
     {
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.zookeeper.name]",
-      "location": "[resourceGroup().location]",
+      "name": "[parameters('networkSettings').subnets.zookeeper.name]",      
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.zookeeper.prefix]"
       }
@@ -52,8 +50,7 @@
     {
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.data.name]",
-      "location": "[resourceGroup().location]",
+      "name": "[parameters('networkSettings').subnets.data.name]",      
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.data.prefix]"
       }
@@ -61,8 +58,7 @@
     {
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.monit.name]",
-      "location": "[resourceGroup().location]",
+      "name": "[parameters('networkSettings').subnets.monit.name]",     
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.monit.prefix]"
       }
@@ -70,8 +66,7 @@
     {
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.azkaban.name]",
-      "location": "[resourceGroup().location]",
+      "name": "[parameters('networkSettings').subnets.azkaban.name]",      
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.azkaban.prefix]"
       }
