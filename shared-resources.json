@@ -32,41 +32,61 @@
     },
 
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.dmz.name]",     
+      "name": "[concat(parameters('networkSettings').vnetName, '/', parameters('networkSettings').subnets.dmz.name)]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', parameters('networkSettings').vnetName)]"
+      ],
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.dmz.prefix]"
       }
     },
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.zookeeper.name]",      
+      "name": "[concat(parameters('networkSettings').vnetName, '/', parameters('networkSettings').subnets.zookeeper.name)]",
+      "location": "[resourceGroup().location]",    
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', parameters('networkSettings').vnetName)]"
+      ],
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.zookeeper.prefix]"
       }
     },
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.data.name]",      
+      "name": "[concat(parameters('networkSettings').vnetName, '/', parameters('networkSettings').subnets.data.name)]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', parameters('networkSettings').vnetName)]"
+      ],
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.data.prefix]"
       }
     },
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.monit.name]",     
+      "name": "[concat(parameters('networkSettings').vnetName, '/', parameters('networkSettings').subnets.monit.name)]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', parameters('networkSettings').vnetName)]"
+      ],
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.monit.prefix]"
       }
     },
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01-preview",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[parameters('networkSettings').subnets.azkaban.name]",      
+      "name": "[concat(parameters('networkSettings').vnetName, '/', parameters('networkSettings').subnets.azkaban.name)]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', parameters('networkSettings').vnetName)]"
+      ],
       "properties": {
         "addressPrefix": "[parameters('networkSettings').subnets.azkaban.prefix]"
       }
